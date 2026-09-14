@@ -1,6 +1,6 @@
 {
   "name": "@raselj5060/react-native-pip",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Android picture-in-picture for Expo and React Native apps: custom actions, auto-enter, and a leave-app fallback.",
   "main": "build/index.js",
   "types": "build/index.d.ts",
