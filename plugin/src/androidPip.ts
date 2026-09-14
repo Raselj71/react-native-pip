@@ -45,15 +45,23 @@ export const copyPipIcons = (
     .forEach((file) => {
       fs.unlinkSync(path.join(drawableDir, file));
     });
+  const seenNames = new Map<string, string>();
   icons.forEach((icon) => {
     const source = path.resolve(projectRoot, icon);
     const extension = path.extname(source).toLowerCase();
     if (!ICON_EXTENSIONS.includes(extension)) {
       throw new Error(
-        `@taskatask/react-native-pip: icon "${icon}" must be a png, webp or xml file`
+        `@raselj71/react-native-pip: icon "${icon}" must be a png, webp or xml file`
       );
     }
     const name = sanitizeIconName(path.basename(source, path.extname(source)));
+    const previousIcon = seenNames.get(name);
+    if (previousIcon) {
+      throw new Error(
+        `@raselj71/react-native-pip: icons "${previousIcon}" and "${icon}" both sanitize to the drawable name "${name}" — rename one of them`
+      );
+    }
+    seenNames.set(name, icon);
     fs.copyFileSync(source, path.join(drawableDir, `${ICON_PREFIX}${name}${extension}`));
   });
 };

@@ -69,4 +69,12 @@ describe('copyPipIcons', () => {
       copyPipIcons(root, drawableDir, ['./assets/bad.svg']);
     }).toThrow(/png, webp or xml/);
   });
+
+  it('rejects two icons that sanitize to the same drawable name', () => {
+    fs.writeFileSync(path.join(root, 'assets', 'Mic-On.png'), 'png');
+    fs.writeFileSync(path.join(root, 'assets', 'mic_on.xml'), '<vector />');
+    expect(() => {
+      copyPipIcons(root, drawableDir, ['./assets/Mic-On.png', './assets/mic_on.xml']);
+    }).toThrow(/mic_on/);
+  });
 });

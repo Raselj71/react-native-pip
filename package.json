@@ -1,5 +1,5 @@
 {
-  "name": "@taskatask/react-native-pip",
+  "name": "@raselj71/react-native-pip",
   "version": "1.0.0",
   "description": "Android picture-in-picture for Expo and React Native apps: custom actions, auto-enter, and a leave-app fallback.",
   "main": "build/index.js",
@@ -7,6 +7,7 @@
   "files": [
     "build",
     "src",
+    "!src/**/__tests__",
     "android/build.gradle",
     "android/src",
     "plugin/build",
@@ -32,6 +33,7 @@
   "publishConfig": { "access": "public" },
   "peerDependencies": { "expo": "*", "react": "*", "react-native": "*" },
   "devDependencies": {
+    "@testing-library/react-native": "13.3.3",
     "@types/node": "26.1.0",
     "@types/react": "19.2.17",
     "expo": "57.0.7",
