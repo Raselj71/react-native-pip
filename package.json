@@ -1,5 +1,5 @@
 {
-  "name": "@raselj71/react-native-pip",
+  "name": "@raselj5060/react-native-pip",
   "version": "1.0.0",
   "description": "Android picture-in-picture for Expo and React Native apps: custom actions, auto-enter, and a leave-app fallback.",
   "main": "build/index.js",

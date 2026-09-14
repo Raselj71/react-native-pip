@@ -51,14 +51,14 @@ export const copyPipIcons = (
     const extension = path.extname(source).toLowerCase();
     if (!ICON_EXTENSIONS.includes(extension)) {
       throw new Error(
-        `@raselj71/react-native-pip: icon "${icon}" must be a png, webp or xml file`
+        `@raselj5060/react-native-pip: icon "${icon}" must be a png, webp or xml file`
       );
     }
     const name = sanitizeIconName(path.basename(source, path.extname(source)));
     const previousIcon = seenNames.get(name);
     if (previousIcon) {
       throw new Error(
-        `@raselj71/react-native-pip: icons "${previousIcon}" and "${icon}" both sanitize to the drawable name "${name}" — rename one of them`
+        `@raselj5060/react-native-pip: icons "${previousIcon}" and "${icon}" both sanitize to the drawable name "${name}" — rename one of them`
       );
     }
     seenNames.set(name, icon);

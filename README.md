@@ -1,4 +1,4 @@
-# @raselj71/react-native-pip
+# @raselj5060/react-native-pip
 
 Android picture-in-picture for Expo and React Native apps: custom actions, auto-enter, and a
 leave-app fallback.
@@ -9,7 +9,7 @@ This package is **Android-only**. On iOS and web every function is a safe no-op 
 ## Install
 
 ```sh
-pnpm add @raselj71/react-native-pip
+pnpm add @raselj5060/react-native-pip
 ```
 
 Add the config plugin to `app.config.ts` (or `app.json`), listing any custom action icons you
@@ -20,7 +20,7 @@ export default {
   // ...
   plugins: [
     [
-      '@raselj71/react-native-pip',
+      '@raselj5060/react-native-pip',
       { icons: ['./assets/pip/mic.xml', './assets/pip/end.png'] },
     ],
   ],
@@ -46,7 +46,7 @@ import {
   addActionListener,
   enter,
   useIsInPip,
-} from '@raselj71/react-native-pip';
+} from '@raselj5060/react-native-pip';
 
 const CallScreen = () => {
   const isInPip = useIsInPip();
